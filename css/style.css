@@ -30,3 +30,12 @@ table {
 	background-color: rgba(233, 177, 56, 0.623);
 	cursor: pointer;
 }
+
+button {
+	border: none;
+	width: 60px;
+	height: 30px;
+	font-size: 16px;
+	background-color: rgb(204, 199, 199);
+	color: rgb(29, 29, 29);
+}
