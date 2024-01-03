@@ -3,6 +3,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	color: rgb(197, 197, 197);
 	text-align: center;
+	user-select: none;
 }
 
 .board {
@@ -22,8 +23,8 @@ table {
 	background-color: rgb(136, 132, 132);
 }
 
-.hidden {
-	display: none;
+.clicked {
+	background-color: rgb(85, 77, 77);
 }
 
 .cell:hover {
@@ -33,9 +34,10 @@ table {
 
 button {
 	border: none;
-	width: 60px;
+	width: 80px;
 	height: 30px;
 	font-size: 16px;
+	font-weight: bold;
 	background-color: rgb(204, 199, 199);
 	color: rgb(29, 29, 29);
 }
