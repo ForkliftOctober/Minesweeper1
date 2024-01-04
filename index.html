@@ -12,22 +12,35 @@
 		/>
 	</head>
 	<body onload="onInit()">
-		<header>
-			<h1>MINESWEEPER</h1>
-		</header>
-		<div class="menu">
-			<button onclick="onChooseSize(1)">Easy</button>
-			<button onclick="onChooseSize(2)">Medium</button>
-			<button onclick="onChooseSize(3)">Hard</button>
+		<div class="top">
+			<header>
+				<h1>MINESWEEPER</h1>
+			</header>
+			<div class="menu">
+				<button onclick="onChooseSize(1)">Easy</button>
+				<button onclick="onChooseSize(2)">Medium</button>
+				<button onclick="onChooseSize(3)">Hard</button>
+			</div>
 		</div>
-		<div>
-			<p class="minesLeft">Mines left: <span></span></p>
+
+		<div class="interface">
+			<!-- <div class="hint-container">
+				<div class="hints"></div>
+				<button onclick="getHint()">Hint?</button>
+			</div> -->
+			<p class="minesLeft">Mines left: <span class=""></span></p>
+			<button onclick="onRestart()" class="face">😃</button>
+			<div class="extraLives"></div>
 		</div>
 		<main>
 			<div class="board"></div>
 		</main>
+		<div class="name">
+			<p>Or Kravitz</p>
+		</div>
 
 		<script src="js/util.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/click.js"></script>
 	</body>
 </html>
