@@ -45,6 +45,7 @@ button {
 	background-color: rgb(204, 199, 199);
 	color: rgb(29, 29, 29);
 	border-radius: 10%;
+	margin: 3px;
 }
 
 .face {

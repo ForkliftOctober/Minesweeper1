@@ -31,6 +31,7 @@ const gGame = {
 	extraLives: 3,
 	hints: 3,
 	isHintOn: false,
+	isExterminated: false,
 }
 
 var gBoard
@@ -45,6 +46,7 @@ function onInit() {
 	gGame.hints = 3
 	gGame.isOn = true
 	gGame.isClicked = false
+	gGame.isExterminated = false
 
 	// gBoard = createEmptyBoard(gLevel.SIZE)
 	// gBoard = createBoard(gLevel.SIZE, gLevel.MINES)
@@ -216,7 +218,7 @@ function onChooseSize(str) {
 			gLevel.MINES = 2
 			break
 		case 2:
-			gLevel.SIZE = 6
+			gLevel.SIZE = 8
 			gLevel.MINES = 14
 			break
 
@@ -304,4 +306,29 @@ function hintsHandler(str) {
 			elHints.innerHTML += HINT_DEPLETED
 		}
 	}
+}
+
+// MINE EXTERMINATOR
+function onMineExterminator() {
+	if (gGame.isExterminated) return
+	alert('this button is currently broken')
+	alert('goodbye')
+	gGame.isExterminated = true
+	return
+
+	console.log('exterminate')
+
+	const board = gBoard
+	var minesCleared = 0
+
+	for (var i = 0; i < board.length; i++) {
+		for (var j = 0; j < board[i].length; j++) {
+			var currCell = board[i][j]
+			if (currCell.isMine) {
+				currCell.isMine = false
+				minesCleared++
+			}
+		}
+	}
+	renderBoard(gBoard, '.board')
 }
